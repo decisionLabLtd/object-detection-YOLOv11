@@ -1,0 +1,6 @@
+path: images
+train: train
+val: val
+test: test # optional
+nc: 5  # Number of classes
+names: ["Parcel", "Door", "Person", "Number", "Character"]  # Class names
