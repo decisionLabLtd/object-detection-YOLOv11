@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "storefeeder-photo-compliance"
+version = "0.1.0"
+description = "Computer Vision module for NDA-AUDI-P2"
+authors = ["annbilimoria <anahita.bilimoria@decisionlab.co.uk>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+tqdm = "^4.67.1"
+pandas = "^2.2.3"
+opencv-python = "^4.11.0.86"
+pillow = "^11.1.0"
+matplotlib = "^3.10.0"
+natsort = "^8.4.0"
+ultralytics = "^8.3.70"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
