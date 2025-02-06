@@ -21,4 +21,21 @@ The preprocessing.ipynb combines a set of separate datasets that are already hav
 
 ## Training pipeline
 
-The training.ipynb file runs the training for the YOLOv11 model. Then it exports it to `.onnx` format and `.tflite` format. Finally, a few test inferences are demonstrated on each class of interest.
+The `training.ipynb` file runs the training for the YOLOv11 model. Then it exports it to `.onnx` format and `.tflite` format.
+
+### Running from CLI
+
+Trains the pretrained YOLOv11 nano for 100 epochs with 640px input image size. The data arg points to the custom dataset yaml for training. The device is automatically detected and selected - GPU if available.
+
+Note, ensure you have the venv setup and activated see [setup and installations](#setup-and-installations).
+
+```
+yolo detect train data=model/data.yaml model=yolo11n.pt epochs=100 imgsz=640
+```
+
+You can also specify the device (and multiple devices).
+
+```
+# Start training from a pretrained *.pt model using GPUs 0 and 1
+yolo detect train data=model/data.yaml model=yolo11n.pt epochs=100 imgsz=640 device=0,1
+```
